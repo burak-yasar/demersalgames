@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Official Demersal Games Studio Website | Located in Istanbul
+    </title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #100c08;
+            color: #24292E;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            user-select: none;
+        }
+        .container{
+            max-width: 500px;
+            padding: 20px;
+        }
+        
+        h1{
+            color: #B5B6BA;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: color 0.1s ease;
+        }
+
+        p{
+            font-size: 1.4rem;
+            color: #B5B6BA;
+            line-height: 1.6;
+        }
+
+        .badge{
+            background-color: #100c08;
+            color: #D3F5F5;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            transition: all 0.5s ease;
+        }
+
+        .badge.online{
+            background-color: #052e16;
+            color: #4ade80;
+            box-shadow: 0 0 10px rgba(75, 220, 130, 0.2);
+        }
+
+        .social-links a{
+            color:aqua;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+
+        .social-links a:hover{
+            color:cadetblue;
+        }
+
+        footer{
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color:darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge" id="status-badge">LOADING...</div>
+        <h1 id="studio-title">DEMERSAL GAMES STUDIO</h1>
+        <p>Demersal Games Studio is an independent indie game development hub for multiple platforms. We develop games for both PC and Mobile platforms.</p>
+        <div class="social-links">
+            <a href="https://x.com/DemersalGames" target="_blank">X/Twitter</a>
+            <a href="https://www.youtube.com/@DemersalGames" target="_blank">YouTube</a>
+            <a href="https://www.facebook.com/people/Demersal-Games/61589172874109/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/demersalgames" target="_blank">Instagram</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2026 Demersal Games Studio. All rights reserved.
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const badge=document.getElementById('status-badge');
+
+            setTimeout(() => {
+                badge.textContent='ONLINE';
+                badge.classList.add('online');
+            }, 1700);
+        });
+        const title = document.getElementById('studio-title');
+        const neonColors = ['#00ffcc', '#ff0055', '#00ff66', '#ffff00', '#00ffff', '#B5B6BA'];
+
+        title.addEventListener('click', () => {
+            const randomColor = neonColors[Math.floor(Math.random()*neonColors.length)];
+            title.style.color = randomColor;
+            console.log(`%c[Demersal Engine] Theme color changed to: ${randomColor}`,`color: ${randomColor}; font-weight:bold;`);
+        });
+        
+    </script>
+
+</body>
+</html>
