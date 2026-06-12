@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demersal Games | Indie Games for PC and Mobile</title>
+    <meta name="description" content="Demersal Games is an indie game studio in Istanbul building narrative PC and mobile RPG experiences. Follow studio updates, game development news, and team announcements.">
+    <meta name="keywords" content="indie games, PC games, mobile games, narrative RPG, game studio, Istanbul game developer, Burak Yasar, Demersal Games, indie game updates, blog updates">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://demersalgames.studio/">
+    <meta property="og:title" content="Demersal Games | Indie Games for PC and Mobile">
+    <meta property="og:description" content="Demersal Games is an indie game studio in Istanbul building narrative PC and mobile RPG experiences. Follow studio updates, game development news, and team announcements.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://demersalgames.studio/">
+    <meta property="og:site_name" content="Demersal Games">
+    <meta property="og:image" content="https://demersalgames.studio/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Demersal Games | Indie Games for PC and Mobile">
+    <meta name="twitter:description" content="Demersal Games is an indie game studio in Istanbul building narrative PC and mobile RPG experiences. Follow studio updates, game development news, and team announcements.">
+    <meta name="twitter:image" content="https://demersalgames.studio/og-image.png">
+    <meta name="twitter:creator" content="@DemersalGames">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Demersal Games",
+      "url": "https://demersalgames.studio/",
+      "logo": "https://demersalgames.studio/favicon.png",
+      "sameAs": [
+        "https://x.com/DemersalGames",
+        "https://bsky.app/profile/demersalgames.bsky.social",
+        "https://discord.gg/DvD4rfHs",
+        "https://www.youtube.com/@DemersalGames",
+        "https://www.instagram.com/demersalgames",
+        "https://www.facebook.com/people/Demersal-Games/61589172874109/"
+      ],
+      "image": "https://www.demersalgames.com/og-image.png",
+      "description": "Independent indie game studio in Istanbul crafting narrative PC and mobile RPG experiences.",
+      "founder": "Burak Yasar",
+      "foundingDate": "2024-01-01"
+    }
+    </script>
+
+    <style>
+        /* Modern CSS Variables - Deep Ocean / Demersal Theme */
+        :root {
+            --bg-color: #080b0e;        
+            --surface-color: #11161b;   
+            --text-primary: #f1f5f9;    
+            --text-secondary: #d1d5db;  
+            --text-muted: #9ca3af;      
+            --accent-color: #cbd5e1;    
+            --border-color: #475569;    
+            --input-bg: #1a2026;        
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            user-select: none;
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            width: 100%;
+            max-width: 1000px;
+            padding: 25px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .language-switcher {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-color);
+        }
+
+        .lang-btn .flag {
+            font-size: 1.05rem;
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 10px 0;
+            min-width: 210px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            z-index: 20;
+        }
+
+        .lang-menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .lang-option:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+        }
+
+        .lang-option .flag {
+            font-size: 1.1rem;
+        }
+
+        /* --- Main Container --- */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: var(--text-secondary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.5s ease;
+        }
+
+        .badge.online {
+            background-color: rgba(203, 213, 225, 0.12);
+            color: #f8fafc;
+            border-color: rgba(203, 213, 225, 0.25);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* --- Sections Shared Style --- */
+        .section {
+            width: 100%;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            justify-content: center;
+
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-primary);
+        }
+
+        .section-title i {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .text-content {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* --- Our Games Section --- */
+        .games-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .game-card {
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        .game-img-placeholder {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #16202a, #0b1116);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game-tags {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .game-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .game-name {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .game-name:hover,
+        .game-name:focus {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+
+        .game-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .game-platforms {
+            display: flex;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* --- Blog / Updates Section --- */
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .blog-item {
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .blog-item:hover {
+            border-color: var(--text-muted);
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .blog-title:hover {
+            color: var(--accent-color);
+        }
+
+        .blog-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* --- Team Section --- */
+        .team-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .team-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .team-socials {
+            justify-content: center;
+        }
+
+        .team-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--input-bg);
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--text-muted);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Takım bilgisi için dikey hizalama güncellendi */
+        .team-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px; /* İsim, rol ve logolar arası boşluk */
+        }
+
+        .team-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .team-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .team-socials a {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .team-socials a:hover {
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        /* --- Contact Section --- */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 34px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(10, 14, 20, 0.96));
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(14px);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            background-color: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            border-radius: 18px;
+            padding: 18px 18px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.96rem;
+            outline: none;
+            transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.18);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(148, 163, 184, 0.85);
+            opacity: 1;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: rgba(203, 213, 225, 0.65);
+            box-shadow: 0 0 0 4px rgba(203, 213, 225, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 200px;
+            line-height: 1.7;
+        }
+
+        .submit-btn {
+            width: fit-content;
+            align-self: flex-start;
+            background: linear-gradient(135deg, #d1d5db, #cbd5e1);
+            color: #08101a;
+            border: none;
+            border-radius: 16px;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 18px 40px rgba(108, 122, 137, 0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 48px rgba(108, 122, 137, 0.22);
+        }
+
+        .contact-status {
+            margin-top: 12px;
+            min-height: 1.25rem;
+            color: #8ef6e4;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* --- Social Links (Floating Icons) --- */
+        .social-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            text-decoration: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: var(--surface-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--text-primary);
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+
+        /* --- Footer --- */
+        footer {
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-left {
+            font-weight: 400;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-right a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-right a:hover {
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .games-grid { grid-template-columns: 1fr; }
+            nav { flex-direction: column; gap: 15px; text-align: center; }
+            footer { flex-direction: column; gap: 15px; text-align: center; }
+            .footer-right { justify-content: center; }
+            .section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo">DEMERSAL GAMES</a>
+        <div class="nav-links">
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#games" data-i18n="nav.games">Games</a>
+            <a href="#blog" data-i18n="nav.updates">Blog</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="language-switcher">
+            <button class="lang-btn" id="lang-toggle" aria-expanded="false" type="button">
+                <span class="flag">🇺🇸</span>
+                <span class="lang-label">English</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="lang-menu" id="lang-menu" aria-hidden="true">
+                <button class="lang-option" type="button" data-language="English"><span class="flag">🇺🇸</span> English</button>
+                <button class="lang-option" type="button" data-language="Français"><span class="flag">🇫🇷</span> Français</button>
+                <button class="lang-option" type="button" data-language="Spanish"><span class="flag">🇪🇸</span> Spanish</button>
+                <button class="lang-option" type="button" data-language="Chinese"><span class="flag">🇨🇳</span> Chinese</button>
+                <button class="lang-option" type="button" data-language="Japanese"><span class="flag">🇯🇵</span> Japanese</button>
+                <button class="lang-option" type="button" data-language="Turkish"><span class="flag">🇹🇷</span> Turkish</button>
+                <button class="lang-option" type="button" data-language="Ukrainian"><span class="flag">🇺🇦</span> Ukrainian</button>
+                <button class="lang-option" type="button" data-language="Russian"><span class="flag">🇷🇺</span> Russian</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero">
+            <div class="badge" id="status-badge">
+                <i class="fa-solid fa-spinner fa-spin"></i> CONNECTING...
+            </div>
+            <h1 id="studio-title">DEMERSAL GAMES</h1>
+            <div class="subtitle" data-i18n="hero.subtitle">Independent Indie Game Development Studio | Located in Istanbul</div>
+        </div>
+
+        <div id="about" class="section">
+            <div class="section-title"><i class="fa-solid fa-ghost"></i> <span data-i18n="about.title">About</span></div>
+            <div class="text-content" data-i18n="about.text">
+                Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.
+            </div>
+        </div>
+
+        <div id="games" class="section">
+            <div class="section-title"><i class="fa-solid fa-gamepad"></i> <span data-i18n="games.title">Games</span></div>
+            <div class="games-grid">
+
+                <div class="game-card">
+                    <div class="game-img-placeholder">
+                        <i class="fa-solid fa-anchor"></i>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="game-tag">PC - IN DEVELOPMENT</span>
+                        </div>
+                        <a href="#" class="game-name">Project: Abyssal</a>
+                        <div class="game-desc">An atmospheric deep-sea survival adventure with roguelike elements. Coming soon to Steam.</div>
+                        <div class="game-platforms">
+                            <i class="fa-brands fa-windows" title="Windows"></i>
+                            <i class="fa-brands fa-apple" title="macOS"></i>
+                            <i class="fa-brands fa-linux" title="Linux"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-img-placeholder">
+                        <i class="fa-solid fa-dragon"></i>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="game-tag">PC - IN DEVELOPMENT</span>
+                        </div>
+                        <a href="#" class="game-name">Abyssal Rift</a>
+                        <div class="game-desc">A rogue-lite underwater action RPG that pits salvagers against forgotten leviathans in a submerged cyber-abyss.</div>
+                        <div class="game-platforms">
+                            <i class="fa-brands fa-windows" title="Windows"></i>
+                            <i class="fa-brands fa-apple" title="macOS"></i>
+                            <i class="fa-brands fa-linux" title="Linux"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-img-placeholder">
+                        <i class="fa-solid fa-wave-square"></i>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="game-tag">MOBILE - IN DEVELOPMENT</span>
+                        </div>
+                        <a href="#" class="game-name">Trench Echoes</a>
+                        <div class="game-desc">A minimalist, sound-based puzzle game designed specifically for touch screens.</div>
+                        <div class="game-platforms">
+                            <i class="fa-brands fa-apple" title="App Store"></i>
+                            <i class="fa-brands fa-android" title="Android"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-img-placeholder">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="game-tag">MOBILE - IN DEVELOPMENT</span>
+                        </div>
+                        <a href="#" class="game-name">Echo Drift</a>
+                        <div class="game-desc">A rhythm-based exploration puzzle where every beat shifts the aquatic landscape beneath the player.</div>
+                        <div class="game-platforms">
+                            <i class="fa-brands fa-apple" title="App Store"></i>
+                            <i class="fa-brands fa-android" title="Android"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-img-placeholder">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="game-tag">MOBILE - IN DEVELOPMENT</span>
+                        </div>
+                        <a href="#" class="game-name">Tidebound</a>
+                        <div class="game-desc">A coastal strategy adventure where you guide a sea-bound crew through tidal storms and abandoned ports.</div>
+                        <div class="game-platforms">
+                            <i class="fa-brands fa-apple" title="App Store"></i>
+                            <i class="fa-brands fa-android" title="Android"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-img-placeholder">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="game-tag">MOBILE - IN DEVELOPMENT</span>
+                        </div>
+                        <a href="#" class="game-name">Lumen Shores</a>
+                        <div class="game-desc">A narrative coastal mystery where light puzzles unlock hidden tales in fog-laced ruins.</div>
+                        <div class="game-platforms">
+                            <i class="fa-brands fa-apple" title="App Store"></i>
+                            <i class="fa-brands fa-android" title="Android"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="blog" class="section">
+            <div class="section-title"><i class="fa-solid fa-bullhorn"></i> <span data-i18n="blog.title">Blog</span></div>
+            <div class="blog-list">
+                
+                <div class="blog-item">
+                    <span class="blog-date">Oct 14, 2026</span>
+                    <a href="#" class="blog-title" data-i18n="blog.post1.title">Development Diary #1: Lighting the Abyss</a>
+                    <div class="blog-excerpt" data-i18n="blog.post1.excerpt">
+                        We've just implemented a new dynamic volumetric lighting system for Project: Abyssal. This dramatically changes how players will navigate the deep trenches, relying purely on bioluminescence and limited sonar...
+                    </div>
+                </div>
+
+                <div class="blog-item">
+                    <span class="blog-date">Sep 28, 2026</span>
+                    <a href="#" class="blog-title" data-i18n="blog.post2.title">Welcome to Demersal Games!</a>
+                    <div class="blog-excerpt" data-i18n="blog.post2.excerpt">
+                        Our studio officially launches today. We are thrilled to begin this journey and can't wait to share the dark, narrative-driven worlds we are building. Follow our social media channels for regular updates.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <div class="section-title"><i class="fa-solid fa-envelope"></i> <span data-i18n="contact.title">Contact</span></div>
+            <form name="iletisim-formu" method="POST">
+                <div class="form-group">
+                    <label for="name" data-i18n="contact.labelName">Name / Studio</label>
+                    <input type="text" id="name" name="name" data-i18n-placeholder="contact.placeholderName" placeholder="Your name or company" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="contact.labelEmail">Email Address</label>
+                    <input type="email" id="email" name="email" data-i18n-placeholder="contact.placeholderEmail" placeholder="hello@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="contact.labelMessage">Message</label>
+                    <textarea id="message" name="message" data-i18n-placeholder="contact.placeholderMessage" placeholder="Tell us about your project, feedback, or business inquiries..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" data-i18n="contact.sendButton">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-links">
+            <a href="https://x.com/DemersalGames" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/demersalgames" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/Demersal-Games/61589172874109/" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@DemersalGames" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="bsky.app/profile/demersalgames.bsky.social" target="_blank" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="discord.gg/DvD4rfHs" target="_blank" title="Discord"><i class="fa-brands fa-discord"></i></a>    
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            &copy; <span id="year"></span> Demersal Games Studio. All rights reserved.
+        </div>
+        <div class="footer-right">
+            <a href="#">Cookies settings</a>
+            <span>|</span>
+            <a href="#">Privacy policy</a>
+            <span>|</span>
+            <a href="#">Fan content policy</a>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-update footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const translations = {
+            English: {
+                'nav.about': 'About',
+                'nav.vision': 'Vision',
+                'nav.games': 'Games',
+                'nav.updates': 'Blog',
+                'nav.team': 'Team',
+                'nav.contact': 'Contact',
+                'hero.subtitle': 'Independent Indie Game Development Studio | Located in Istanbul',
+                'about.title': 'About',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': 'Our Vision',
+                'vision.text': 'We believe video games are the ultimate medium for complex storytelling. Our vision is to create digital ecosystems that challenge the player\'s intellect and morality. We don\'t just build games to pass the time; we engineer deep, atmospheric worlds that linger in the mind long after the screen goes dark. Quality over quantity, depth over breadth.',
+                'games.title': 'Games',
+                'game1.tag1': 'PC',
+                'game1.tag2': 'In Development',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': 'An atmospheric deep-sea survival adventure with roguelike elements. Coming soon to Steam.',
+                'game2.tag1': 'Mobile',
+                'game2.tag2': 'Concept',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'A minimalist, sound-based puzzle game designed specifically for touch screens.',
+                'blog.title': 'Blog',
+                'blog.post1.title': 'Development Diary #1: Lighting the Abyss',
+                'blog.post1.excerpt': 'We\'ve just implemented a new dynamic volumetric lighting system for Project: Abyssal. This dramatically changes how players will navigate the deep trenches, relying purely on bioluminescence and limited sonar...',
+                'blog.post2.title': 'Welcome to Demersal Games!',
+                'blog.post2.excerpt': 'Our studio officially launches today. We are thrilled to begin this journey and can\'t wait to share the dark, narrative-driven worlds we are building. Follow our social media channels for regular updates.',
+                'team.title': 'The Team',
+                'team.name': 'Burak Yasar',
+                'team.role': 'Owner & Lead Developer',
+                'contact.title': 'Contact',
+                'contact.labelName': 'Name / Studio',
+                'contact.placeholderName': 'Your name or company',
+                'contact.labelEmail': 'Email Address',
+                'contact.placeholderEmail': 'hello@example.com',
+                'contact.labelMessage': 'Message',
+                'contact.placeholderMessage': 'Tell us about your project, feedback, or business inquiries...',
+                'contact.sendButton': 'Send Message'
+            },
+            Français: {
+                'nav.about': 'Qui Nous Sommes',
+                'nav.vision': 'Vision',
+                'nav.games': 'Jeux',
+                'nav.updates': 'Blog',
+                'nav.team': 'Équipe',
+                'nav.contact': 'Contact',
+                'hero.subtitle': 'Studio indépendant de jeux vidéo | Basé à Istanbul',
+                'about.title': 'Qui Nous Sommes ?',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': 'Notre Vision',
+                'vision.text': 'Nous croyons que les jeux vidéo sont le médium ultime pour des récits complexes. Notre vision est de créer des écosystèmes numériques qui défient l\'intellect et la moralité du joueur. Nous ne construisons pas seulement des jeux pour passer le temps ; nous concevons des mondes profonds et atmosphériques qui restent dans l\'esprit longtemps après que l\'écran s\'éteint. La qualité avant la quantité, la profondeur avant l\'ampleur.',
+                'games.title': 'Nos Jeux',
+                'game1.tag1': 'PC',
+                'game1.tag2': 'En développement',
+                'game1.name': 'Project : Abyssal',
+                'game1.desc': 'Une aventure de survie en haute mer atmosphérique avec des éléments roguelike. Bientôt disponible sur Steam.',
+                'game2.tag1': 'Mobile',
+                'game2.tag2': 'Concept',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'Un jeu de puzzle minimaliste basé sur le son, conçu spécifiquement pour les écrans tactiles.',
+                'blog.title': 'Blog',
+                'blog.post1.title': 'Journal de développement #1 : Éclairer l\'Abyme',
+                'blog.post1.excerpt': 'Nous venons de mettre en place un nouveau système d\'éclairage volumétrique dynamique pour Project : Abyssal. Cela change radicalement la façon dont les joueurs naviguent dans les profondes tranchées, en s\'appuyant uniquement sur la bioluminescence et un sonar limité...',
+                'blog.post2.title': 'Bienvenue chez Demersal Games !',
+                'blog.post2.excerpt': 'Notre studio ouvre officiellement aujourd\'hui. Nous sommes ravis de commencer cette aventure et avons hâte de partager les mondes sombres et narratifs que nous construisons. Suivez nos réseaux sociaux pour des mises à jour régulières.',
+                'team.title': 'L\'Équipe',
+                'team.name': 'Burak Yasar',
+                'team.role': 'Propriétaire & Développeur Principal',
+                'contact.title': 'Contact',
+                'contact.labelName': 'Nom / Studio',
+                'contact.placeholderName': 'Votre nom ou entreprise',
+                'contact.labelEmail': 'Adresse e-mail',
+                'contact.placeholderEmail': 'bonjour@exemple.com',
+                'contact.labelMessage': 'Message',
+                'contact.placeholderMessage': 'Parlez-nous de votre projet, de vos retours ou de vos demandes professionnelles...',
+                'contact.sendButton': 'Envoyer le message'
+            },
+            Spanish: {
+                'nav.about': 'Quiénes Somos',
+                'nav.vision': 'Visión',
+                'nav.games': 'Juegos',
+                'nav.updates': 'Blog',
+                'nav.team': 'Equipo',
+                'nav.contact': 'Contacto',
+                'hero.subtitle': 'Estudio independiente de juegos | Ubicado en Estambul',
+                'about.title': 'Quiénes Somos',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': 'Nuestra Visión',
+                'vision.text': 'Creemos que los videojuegos son el medio definitivo para contar historias complejas. Nuestra visión es crear ecosistemas digitales que desafíen el intelecto y la moralidad del jugador. No solo creamos juegos para pasar el tiempo; diseñamos mundos profundos y atmosféricos que permanecen en la mente mucho después de que la pantalla se apaga. Calidad sobre cantidad, profundidad sobre amplitud.',
+                'games.title': 'Nuestros Juegos',
+                'game1.tag1': 'PC',
+                'game1.tag2': 'En desarrollo',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': 'Una aventura de supervivencia en alta mar con elementos roguelike. Próximamente en Steam.',
+                'game2.tag1': 'Móvil',
+                'game2.tag2': 'Concepto',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'Un juego de rompecabezas minimalista basado en sonido diseñado específicamente para pantallas táctiles.',
+                'blog.title': 'Blog',
+                'blog.post1.title': 'Diario de Desarrollo #1: Iluminando el Abismo',
+                'blog.post1.excerpt': 'Acabamos de implementar un nuevo sistema de iluminación volumétrica dinámica para Project: Abyssal. Esto cambia radicalmente cómo los jugadores navegan las profundas trincheras, confiando únicamente en la bioluminiscencia y un sonar limitado...',
+                'blog.post2.title': '¡Bienvenidos a Demersal Games!',
+                'blog.post2.excerpt': 'Nuestro estudio se lanza oficialmente hoy. Estamos encantados de comenzar este viaje y no podemos esperar a compartir los mundos oscuros y narrativos que estamos construyendo. Sigue nuestras redes sociales para actualizaciones regulares.',
+                'team.title': 'El Equipo',
+                'team.name': 'Burak Yasar',
+                'team.role': 'Propietario y Desarrollador Principal',
+                'contact.title': 'Contacto',
+                'contact.labelName': 'Nombre / Estudio',
+                'contact.placeholderName': 'Tu nombre o empresa',
+                'contact.labelEmail': 'Correo electrónico',
+                'contact.placeholderEmail': 'hola@ejemplo.com',
+                'contact.labelMessage': 'Mensaje',
+                'contact.placeholderMessage': 'Cuéntanos sobre tu proyecto, comentarios o consultas comerciales...',
+                'contact.sendButton': 'Enviar Mensaje'
+            },
+            Chinese: {
+                'nav.about': '关于我们',
+                'nav.vision': '愿景',
+                'nav.games': '游戏',
+                'nav.updates': 'Blog',
+                'nav.team': '团队',
+                'nav.contact': '联系',
+                'hero.subtitle': '独立游戏开发工作室 | 位于伊斯坦布尔',
+                'about.title': '我们是谁？',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': '我们的愿景',
+                'vision.text': '我们相信电子游戏是传达复杂故事的终极媒介。我们的愿景是创建挑战玩家智力和道德的数字生态系统。我们不仅仅是在制作消磨时间的游戏；我们打造深邃而富有氛围的世界，让玩家在屏幕熄灭后仍难以忘怀。质量重于数量，深度重于广度。',
+                'games.title': '我们的游戏',
+                'game1.tag1': 'PC',
+                'game1.tag2': '开发中',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': '一款具有roguelike元素的氛围深海生存冒险。即将登陆Steam。',
+                'game2.tag1': '移动',
+                'game2.tag2': '概念',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': '一款专为触屏设计的极简声音解谜游戏。',
+                'blog.title': 'Blog',
+                'blog.post1.title': '开发日志 #1：点亮深渊',
+                'blog.post1.excerpt': '我们刚刚为Project: Abyssal实现了新的动态体积光照系统。这极大改变了玩家在深沟中探索的方式，完全依靠生物荧光和有限的声呐...',
+                'blog.post2.title': '欢迎来到Demersal Games！',
+                'blog.post2.excerpt': '我们的工作室今天正式启动。我们很高兴开始这段旅程，迫不及待地分享我们正在构建的黑暗叙事世界。关注我们的社交媒体获取定期更新。',
+                'team.title': '团队',
+                'team.name': 'Burak Yasar',
+                'team.role': '所有者与首席开发者',
+                'contact.title': '联系',
+                'contact.labelName': '姓名 / 工作室',
+                'contact.placeholderName': '您的姓名或公司',
+                'contact.labelEmail': '电子邮件地址',
+                'contact.placeholderEmail': 'hello@example.com',
+                'contact.labelMessage': '留言',
+                'contact.placeholderMessage': '告诉我们您的项目、反馈或商务咨询...',
+                'contact.sendButton': '发送消息'
+            },
+            Japanese: {
+                'nav.about': '私たちについて',
+                'nav.vision': 'ビジョン',
+                'nav.games': 'ゲーム',
+                'nav.updates': 'Blog',
+                'nav.team': 'チーム',
+                'nav.contact': 'お問い合わせ',
+                'hero.subtitle': 'イスタンブールに拠点を置く独立系ゲーム開発スタジオ',
+                'about.title': '私たちは誰ですか？',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': '私たちのビジョン',
+                'vision.text': '私たちはビデオゲームが複雑な物語を伝えるための究極のメディアであると信じています。私たちのビジョンは、プレイヤーの知性と倫理に挑戦するデジタルエコシステムを作ることです。時間を潰すだけのゲームではなく、画面が消えた後も心に残る深く雰囲気のある世界を作ります。量より質、広さより深さ。',
+                'games.title': '私たちのゲーム',
+                'game1.tag1': 'PC',
+                'game1.tag2': '開発中',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': 'ローグライク要素を備えた大気的な深海サバイバルアドベンチャー。まもなくSteamで登場。',
+                'game2.tag1': 'モバイル',
+                'game2.tag2': 'コンセプト',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'タッチスクリーン向けに設計されたミニマルなサウンドベースのパズルゲーム。',
+                'blog.title': 'Blog',
+                'blog.post1.title': '開発日誌 #1：アビスを照らす',
+                'blog.post1.excerpt': 'Project: Abyssalのために新しい動的ボリューメトリックライティングシステムを実装しました。これにより、プレイヤーは生物発光と限られたソナーだけを頼りに深い溝を進む方法が劇的に変わります...',
+                'blog.post2.title': 'Demersal Gamesへようこそ！',
+                'blog.post2.excerpt': '当スタジオは本日正式にローンチしました。この旅を始められることを嬉しく思い、構築中の暗く物語性のある世界を共有するのが待ちきれません。定期更新はソーシャルメディアで。',
+                'team.title': 'チーム',
+                'team.name': 'Burak Yasar',
+                'team.role': 'オーナー＆リードデベロッパー',
+                'contact.title': 'お問い合わせ',
+                'contact.labelName': '名前 / スタジオ',
+                'contact.placeholderName': 'あなたの名前または会社',
+                'contact.labelEmail': 'メールアドレス',
+                'contact.placeholderEmail': 'hello@example.com',
+                'contact.labelMessage': 'メッセージ',
+                'contact.placeholderMessage': 'プロジェクト、フィードバック、またはお問い合わせ内容を教えてください...',
+                'contact.sendButton': '送信'
+            },
+            Turkish: {
+                'nav.about': 'Kimiz',
+                'nav.vision': 'Vizyon',
+                'nav.games': 'Oyunlar',
+                'nav.updates': 'Blog',
+                'nav.team': 'Ekip',
+                'nav.contact': 'İletişim',
+                'hero.subtitle': 'İstanbul merkezli bağımsız oyun geliştirme stüdyosu',
+                'about.title': 'Biz Kimiz?',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': 'Vizyonumuz',
+                'vision.text': 'Video oyunlarının karmaşık hikayeleri aktarmak için en üst düzey araç olduğuna inanıyoruz. Vizyonumuz, oyuncunun zekâsını ve ahlakını zorlayan dijital ekosistemler yaratmaktır. Sadece zaman geçirmek için oyunlar üretmiyoruz; ekran kapandıktan sonra bile akılda kalan derin, atmosferik dünyalar inşa ediyoruz. Nicelikten çok nitelik, genişlikten çok derinlik.',
+                'games.title': 'Oyunlarımız',
+                'game1.tag1': 'PC',
+                'game1.tag2': 'Geliştirme Aşamasında',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': 'Roguelike unsurlara sahip atmosferik bir derin deniz hayatta kalma macerası. Yakında Steam\'de.',
+                'game2.tag1': 'Mobil',
+                'game2.tag2': 'Konsept',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'Özellikle dokunmatik ekranlar için tasarlanmış minimalist, ses tabanlı bir bulmaca oyunu.',
+                'blog.title': 'Blog',
+                'blog.post1.title': 'Geliştirme Günlüğü #1: Uçurumu Aydınlatmak',
+                'blog.post1.excerpt': 'Project: Abyssal için yeni bir dinamik hacimsel aydınlatma sistemi uyguladık. Bu, oyuncuların derin hendeklerde gezinme şeklini tamamen biyolüminesans ve sınırlı sonar ile değiştiriyor...',
+                'blog.post2.title': 'Demersal Games\'e Hoş Geldiniz!',
+                'blog.post2.excerpt': 'Stüdyomuz bugün resmi olarak açıldı. Bu yolculuğa başlamaktan heyecan duyuyoruz ve inşa ettiğimiz karanlık, hikaye odaklı dünyaları paylaşmak için sabırsızlanıyoruz. Düzenli güncellemeler için sosyal medya kanallarımızı takip edin.',
+                'team.title': 'Ekip',
+                'team.name': 'Burak Yasar',
+                'team.role': 'Kurucu & Baş Geliştirici',
+                'contact.title': 'İletişim',
+                'contact.labelName': 'Ad / Stüdyo',
+                'contact.placeholderName': 'Adınız veya şirketiniz',
+                'contact.labelEmail': 'E-posta Adresi',
+                'contact.placeholderEmail': 'merhaba@ornekkurum.com',
+                'contact.labelMessage': 'Mesaj',
+                'contact.placeholderMessage': 'Projeniz, geri bildiriminiz veya iş talepleriniz hakkında bize bilgi verin...',
+                'contact.sendButton': 'Mesaj Gönder'
+            },
+            Ukrainian: {
+                'nav.about': 'Хто Ми',
+                'nav.vision': 'Бачення',
+                'nav.games': 'Ігри',
+                'nav.updates': 'Blog',
+                'nav.team': 'Команда',
+                'nav.contact': 'Контакти',
+                'hero.subtitle': 'Незалежна студія розробки ігор | Розташована в Стамбулі',
+                'about.title': 'Хто Ми?',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': 'Наше Бачення',
+                'vision.text': 'Ми віримо, що відеоігри є найкращим засобом для передачі складних історій. Наше бачення — створювати цифрові екосистеми, які ставлять виклик інтелекту та моралі гравця. Ми не просто робимо ігри, щоб скоротати час; ми створюємо глибокі атмосферні світи, які залишаються в пам’яті надовго після вимкнення екрану. Якість понад кількість, глибина понад широту.',
+                'games.title': 'Наші Ігри',
+                'game1.tag1': 'ПК',
+                'game1.tag2': 'У розробці',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': 'Атмосферна пригода на виживання в глибинах моря з елементами roguelike. Слідом на Steam.',
+                'game2.tag1': 'Мобільна',
+                'game2.tag2': 'Концепт',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'Мінімалістична звукова головоломка, спеціально створена для сенсорних екранів.',
+                'blog.title': 'Blog',
+                'blog.post1.title': 'Щоденник Розробки #1: Освітлюючи Безодню',
+                'blog.post1.excerpt': 'Ми щойно реалізували нову динамічну об’ємну систему освітлення для Project: Abyssal. Це кардинально змінює те, як гравці досліджують глибокі траншеї, покладаючись виключно на біолюмінесценцію та обмежений сони.',
+                'blog.post2.title': 'Ласкаво просимо до Demersal Games!',
+                'blog.post2.excerpt': 'Наша студія офіційно стартує сьогодні. Ми раді розпочати цю подорож і не можемо дочекатися, щоб поділитися темними, сюжетними світами, які ми створюємо. Слідкуйте за нашими соцмережами для регулярних оновлень.',
+                'team.title': 'Команда',
+                'team.name': 'Burak Yasar',
+                'team.role': 'Власник і провідний розробник',
+                'contact.title': 'Контакти',
+                'contact.labelName': 'Ім’я / Студія',
+                'contact.placeholderName': 'Ваше ім’я або компанія',
+                'contact.labelEmail': 'Електронна пошта',
+                'contact.placeholderEmail': 'hello@example.com',
+                'contact.labelMessage': 'Повідомлення',
+                'contact.placeholderMessage': 'Розкажіть нам про ваш проєкт, відгуки або бізнес-запит...',
+                'contact.sendButton': 'Надіслати повідомлення'
+            },
+            Russian: {
+                'nav.about': 'О нас',
+                'nav.vision': 'Видение',
+                'nav.games': 'Игры',
+                'nav.updates': 'Blog',
+                'nav.team': 'Команда',
+                'nav.contact': 'Контакты',
+                'hero.subtitle': 'Независимая студия разработки игр | Расположена в Стамбуле',
+                'about.title': 'Кто Мы?',
+                'about.text': 'Demersal Games specializes in crafting profound, narrative-driven RPGs and captivating mobile experiences defined by a dark and mysterious aesthetic, dedicating our studio to high-caliber storytelling and immersing players in intricate worlds where every choice carries weight, every shadow conceals a secret, and interactive journeys linger in the mind long after the screen goes dark. Beneath these haunting landscapes and mysterious lore lies a burning core of pure passion, fueled by our fierce belief that human creativity is an unstoppable, boundless force capable of building truly awesome things. In a world that often feels increasingly automated, we champion the raw, unyielding power of the human imagination, firmly believing that the best art comes from the heart, shaped by real human experiences, struggles, and triumphs that give a game an irreplaceable soul. Our mission is to build games anchored in complex, human-driven narratives, using our signature dark aesthetic not just for atmosphere, but as a mirror to explore the depth of the human condition, our moral dilemmas, our resilience, and our capacity for connection. To achieve this, we design intricate missions that challenge player perspectives through difficult choices with real consequences, create flawed, deeply resonant characters that make every narrative beat feel intensely personal, and build boundless worlds piece by piece with meticulous care. Ultimately, we are not here simply to provide passive entertainment; we are here to challenge players to think, analyze, and deeply question their surroundings, proving that even in the deepest, most mysterious shadows, it is the strength of the human spirit and the power of creative storytelling that shines the brightest.',
+                'vision.title': 'Наше Видение',
+                'vision.text': 'Мы верим, что видеоигры являются лучшим средством для передачи сложных историй. Наша цель — создать цифровые экосистемы, которые бросают вызов интеллекту и морали игрока. Мы не просто создаем игры для развлечения; мы создаем глубокие атмосферные миры, которые остаются в памяти надолго после выключения экрана. Качество важнее количества, глубина важнее широты.',
+                'games.title': 'Наши Игры',
+                'game1.tag1': 'ПК',
+                'game1.tag2': 'В разработке',
+                'game1.name': 'Project: Abyssal',
+                'game1.desc': 'Атмосферное приключение на выживание в глубоких водах с элементами roguelike. Скоро на Steam.',
+                'game2.tag1': 'Мобильная',
+                'game2.tag2': 'Концепт',
+                'game2.name': 'Trench Echoes',
+                'game2.desc': 'Минималистичная звуковая головоломка, созданная специально для сенсорных экранов.',
+                'blog.title': 'Blog',
+                'blog.post1.title': 'Дневник разработки №1: Освещение бездны',
+                'blog.post1.excerpt': 'Мы только что реализовали новую динамическую объемную систему освещения для Project: Abyssal. Это кардинально меняет способ, которым игроки исследуют глубокие траншеи, полагаясь только на биолюминесценцию и ограниченный сонар...',
+                'blog.post2.title': 'Добро пожаловать в Demersal Games!',
+                'blog.post2.excerpt': 'Наша студия официально запускается сегодня. Мы рады начать это путешествие и с нетерпением ждем возможности поделиться темными, сюжетными мирами, которые мы создаем. Следите за нашими социальными сетями для регулярных обновлений.',
+                'team.title': 'Команда',
+                'team.name': 'Burak Yasar',
+                'team.role': 'Владелец и ведущий разработчик',
+                'contact.title': 'Контакты',
+                'contact.labelName': 'Имя / Студия',
+                'contact.placeholderName': 'Ваше имя или компания',
+                'contact.labelEmail': 'Электронная почта',
+                'contact.placeholderEmail': 'hello@example.com',
+                'contact.labelMessage': 'Сообщение',
+                'contact.placeholderMessage': 'Расскажите нам о вашем проекте, отзыве или деловом запросе...',
+                'contact.sendButton': 'Отправить сообщение'
+            }
+        };
+
+        const i18nTextElements = document.querySelectorAll('[data-i18n]');
+        const i18nPlaceholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+
+        function applyLanguage(language) {
+            const dictionary = translations[language] || translations.English;
+
+            i18nTextElements.forEach(el => {
+                const key = el.dataset.i18n;
+                if (dictionary[key]) {
+                    el.textContent = dictionary[key];
+                }
+            });
+
+            i18nPlaceholderElements.forEach(el => {
+                const key = el.dataset.i18nPlaceholder;
+                if (dictionary[key]) {
+                    el.placeholder = dictionary[key];
+                }
+            });
+        }
+
+        const langToggle = document.getElementById('lang-toggle');
+        const langMenu = document.getElementById('lang-menu');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const langLabel = langToggle.querySelector('.lang-label');
+        const langFlag = langToggle.querySelector('.flag');
+
+        function setLanguage(language, flag) {
+            langLabel.textContent = language;
+            langFlag.textContent = flag;
+            langMenu.classList.remove('open');
+            langToggle.setAttribute('aria-expanded', 'false');
+            applyLanguage(language);
+            localStorage.setItem('preferredLanguage', language);
+        }
+
+        langToggle.addEventListener('click', () => {
+            const isOpen = langMenu.classList.toggle('open');
+            langToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        langOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                setLanguage(option.dataset.language, option.querySelector('.flag').textContent);
+            });
+        });
+
+        document.addEventListener('click', event => {
+            if (!event.target.closest('.language-switcher')) {
+                langMenu.classList.remove('open');
+                langToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        const initialLanguage = savedLanguage && translations[savedLanguage] ? savedLanguage : 'English';
+        const initialFlag = {
+            English: '🇺🇸',
+            Français: '🇫🇷',
+            Spanish: '🇪🇸',
+            Chinese: '🇨🇳',
+            Japanese: '🇯🇵',
+            Turkish: '🇹🇷',
+            Ukrainian: '🇺🇦',
+            Russian: '🇷🇺'
+        }[initialLanguage] || '🇺🇸';
+        setLanguage(initialLanguage, initialFlag);
+
+        // Status Badge Modern Logic
+        window.addEventListener('DOMContentLoaded', () => {
+            const badge = document.getElementById('status-badge');
+            setTimeout(() => {
+                badge.innerHTML = '<i class="fa-solid fa-circle" style="font-size: 8px; color: #cbd5e1;"></i> ONLINE';
+                badge.classList.add('online');
+            }, 1200);
+        });
+
+        // Easter Egg: Studio Title Colors (Muted Ocean/Slate tones)
+        const title = document.getElementById('studio-title');
+        const demersalColors = [
+            '#d1d5db', // Light Silver Gray
+            '#e5e7eb', // Soft Cloud White
+            '#c0c0c0', // Silver Accent
+            '#f8fafc', // Frost White
+            '#cbd5e1', // Pale Silver
+            '#f1f5f9'  // Base White
+        ];
+
+        title.addEventListener('click', () => {
+            const randomColor = demersalColors[Math.floor(Math.random() * demersalColors.length)];
+            title.style.color = randomColor;
+            console.log(`%c[Demersal Engine] Palette shift: ${randomColor}`, `color: ${randomColor}; font-weight:bold; background: #11161b; padding: 3px 8px; border-radius: 4px;`);
+        });
+
+    </script>
+
+</body>
+</html>
